@@ -13,12 +13,11 @@ echo "Did you establish Build Environment?"
 echo "Select"
 echo "1 = Yes"
 echo "2 = No, idk what that is"
-clear
 
-if [ $n -eq 1 ]; then
+if [ "$n" -eq "1" ]; then
 echo "Continuing to build"
 
-elif [ $n -eq 2 ]; then
+elif [ "$n" -eq "2" ]; then
 sudo apt-get install git-core gnupg flex bison build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc unzip fontconfig
 
 fi
@@ -28,7 +27,7 @@ echo "Do you have toolcahin?"
 echo "1 = Yes"
 echo "2 = No, i need one."
 
-if [ $n -eq 1 ]; then
+if [ "$n" -eq "1" ]; then
 echo "Nice job"
 
 elif [ $n -eq 2 ]; then
