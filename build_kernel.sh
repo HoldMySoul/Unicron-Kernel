@@ -15,9 +15,11 @@ echo "1 = Yes"
 echo "2 = No, idk what that is"
 
 if [ "$n" -eq "1" ]; then
+
 echo "Continuing to build"
 
 elif [ "$n" -eq "2" ]; then
+
 sudo apt-get install git-core gnupg flex bison build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc unzip fontconfig
 
 fi
@@ -28,9 +30,11 @@ echo "1 = Yes"
 echo "2 = No, i need one."
 
 if [ "$n" -eq "1" ]; then
+
 echo "Nice job"
 
 elif [ $n -eq 2 ]; then
+
 git clone https://github.com/HoldMySoul/prebuilts_gcc_linux-x86_aarch64_aarch64-linaro-7.git prebuilts_gcc_linux-x86_aarch64_aarch64-linaro-7
 fi
 
