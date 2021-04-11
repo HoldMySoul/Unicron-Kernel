@@ -38,7 +38,6 @@ Module.symvers
 #
 # Top-level generic files
 #
-build_kernel.sh
 /tags
 /TAGS
 /linux
