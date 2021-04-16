@@ -8,9 +8,6 @@ export PLATFORM_VERSION=10
 export USE_CCACHE=1
 CPU=`nproc --all`
 clear
-echo "Did you establish Build Environment?"
-
-sudo apt-get install git-core gnupg flex bison build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc unzip fontconfig
 
 echo "Select"
 echo "1 = Exit"
@@ -32,8 +29,8 @@ exit
 elif [ $n -eq 2 ]; then
 
 make clean && make mrproper
-rm -r /home/tuesipipele/Unicron-Kernel//arch/arm64/boot/Image
-rm -r /home/tuesipipele/Unicron-Kernel//arch/arm64/boot/dtb.img
+rm -r /home/tuesipipele/Unicron-Kernel/arch/arm64/boot/Image
+rm -r /home/tuesipipele/Unicron-Kernel/arch/arm64/boot/dtb.img
 elif [ $n -eq 3 ]; then
 
 echo "============="
@@ -42,10 +39,10 @@ echo "============="
 make exynos7870-a3y17lte_defconfig
 make -j"$CPU"
 echo "Kernel Compiled for A3lte"
-mv /home/tuesipipele/Unicron-Kernel//arch/arm64/boot/Image /home/tuesipipele/Unicron-Kernel//build_folder/split_img/boot.img-zImage
-mv /home/tuesipipele/Unicron-Kernel//arch/arm64/boot/dtb.img /home/tuesipipele/Unicron-Kernel//build_folder/split_img/boot.img-dt
-echo martins | sudo -S /home/tuesipipele/Unicron-Kernel//build_folder/repackimg.sh
-mv /home/tuesipipele/Unicron-Kernel//build_folder/image-new.img /home/tuesipipele/Unicron-Kernel//build_folder/output/Unicron-Kernel-a3y17lte.img
+mv /home/tuesipipele/Unicron-Kernel/arch/arm64/boot/Image /home/tuesipipele/Unicron-Kernel/build_folder/split_img/boot.img-zImage
+mv /home/tuesipipele/Unicron-Kernel/arch/arm64/boot/dtb.img /home/tuesipipele/Unicron-Kernel/build_folder/split_img/boot.img-dt
+echo martins | sudo -S /home/tuesipipele/Unicron-Kernel/build_folder/repackimg.sh
+mv /home/tuesipipele/Unicron-Kernel/build_folder/image-new.img /home/tuesipipele/Unicron-Kernel/build_folder/output/Unicron-Kernel-a3y17lte.img
 echo "Cleaning Please wait....."
 make clean
 times
@@ -57,10 +54,10 @@ elif [ $n -eq 4 ]; then
 make exynos7870-j7velte_defconfig
 make -j"$CPU"
 echo "Kernel Compiled for J7velte"
-mv /home/tuesipipele/Unicron-Kernel//arch/arm64/boot/Image /home/tuesipipele/Unicron-Kernel//build_folder/split_img/boot.img-zImage
-mv /home/tuesipipele/Unicron-Kernel//arch/arm64/boot/dtb.img /home/tuesipipele/Unicron-Kernel//build_folder/split_img/boot.img-dt
-echo martins | sudo -S /home/tuesipipele/Unicron-Kernel//build_folder/repackimg.sh
-mv /home/tuesipipele/Unicron-Kernel//build_folder/image-new.img /home/tuesipipele/Unicron-Kernel//build_folder/output/Unicron-Kernel_j7ve.img
+mv /home/tuesipipele/Unicron-Kernel/arch/arm64/boot/Image /home/tuesipipele/Unicron-Kernel/build_folder/split_img/boot.img-zImage
+mv /home/tuesipipele/Unicron-Kernel/arch/arm64/boot/dtb.img /home/tuesipipele/Unicron-Kernel/build_folder/split_img/boot.img-dt
+echo martins | sudo -S /home/tuesipipele/Unicron-Kernel/build_folder/repackimg.sh
+mv /home/tuesipipele/Unicron-Kernel/build_folder/image-new.img /home/tuesipipele/Unicron-Kernel/build_folder/output/Unicron-Kernel_j7ve.img
 echo "Cleaning Please wait....."
 make clean
 echo "Done"
@@ -72,10 +69,10 @@ elif [ $n -eq 6 ]; then
 make exynos7870-j5y17lte_defconfig
 make -j"$CPU"
 echo "Kernel Compiled for J5"
-mv /home/tuesipipele/Unicron-Kernel//arch/arm64/boot/Image /home/tuesipipele/Unicron-Kernel//build_folder/split_img/boot.img-zImage
-mv /home/tuesipipele/Unicron-Kernel//arch/arm64/boot/dtb.img /home/tuesipipele/Unicron-Kernel//build_folder/split_img/boot.img-dt
-echo martins | sudo -S /home/tuesipipele/Unicron-Kernel//build_folder/repackimg.sh
-mv /home/tuesipipele/Unicron-Kernel//build_folder/image-new.img /home/tuesipipele/Unicron-Kernel//build_folder/output/Unicron-Kernel_j5y17lte.img
+mv /home/tuesipipele/Unicron-Kernel/arch/arm64/boot/Image /home/tuesipipele/Unicron-Kernel/build_folder/split_img/boot.img-zImage
+mv /home/tuesipipele/Unicron-Kernel/arch/arm64/boot/dtb.img /home/tuesipipele/Unicron-Kernel/build_folder/split_img/boot.img-dt
+echo martins | sudo -S /home/tuesipipele/Unicron-Kernel/build_folder/repackimg.sh
+mv /home/tuesipipele/Unicron-Kernel/build_folder/image-new.img /home/tuesipipele/Unicron-Kernel/build_folder/output/Unicron-Kernel_j5y17lte.img
 echo "Cleaning Please wait....."
 make clean
 echo "Done"
@@ -86,10 +83,10 @@ elif [ $n -eq 7 ]; then
 make exynos7870-j6lte_defconfig
 make -j"$CPU"
 echo "Kernel Compiled for J6lte"
-mv /home/tuesipipele/Unicron-Kernel//arch/arm64/boot/Image /home/tuesipipele/Unicron-Kernel//build_folder/split_img/boot.img-zImage
-mv /home/tuesipipele/Unicron-Kernel//arch/arm64/boot/dtb.img /home/tuesipipele/Unicron-Kernel//build_folder/split_img/boot.img-dt
-echo martins | sudo -S /home/tuesipipele/Unicron-Kernel//build_folder/repackimg.sh
-mv /home/tuesipipele/Unicron-Kernel//build_folder/image-new.img /home/tuesipipele/Unicron-Kernel//build_folder/output/Unicron-Kernel_j6lte.img
+mv /home/tuesipipele/Unicron-Kernel/arch/arm64/boot/Image /home/tuesipipele/Unicron-Kernel/build_folder/split_img/boot.img-zImage
+mv /home/tuesipipele/Unicron-Kernel/arch/arm64/boot/dtb.img /home/tuesipipele/Unicron-Kernel/build_folder/split_img/boot.img-dt
+echo martins | sudo -S /home/tuesipipele/Unicron-Kernel/build_folder/repackimg.sh
+mv /home/tuesipipele/Unicron-Kernel/build_folder/image-new.img /home/tuesipipele/Unicron-Kernel/build_folder/output/Unicron-Kernel_j6lte.img
 echo "Cleaning Please wait....."
 make clean
 echo "Done"
@@ -100,10 +97,10 @@ elif [ $n -eq 8 ]; then
 make exynos7870-j7xelte_defconfig
 make -j"$CPU"
 echo "Kernel Compiled for J7xelte"
-mv /home/tuesipipele/Unicron-Kernel//arch/arm64/boot/Image /home/tuesipipele/Unicron-Kernel//build_folder/split_img/boot.img-zImage
-mv /home/tuesipipele/Unicron-Kernel//arch/arm64/boot/dtb.img /home/tuesipipele/Unicron-Kernel//build_folder/split_img/boot.img-dt
-echo martins | sudo -S /home/tuesipipele/Unicron-Kernel//build_folder/repackimg.sh
-mv /home/tuesipipele/Unicron-Kernel//build_folder/image-new.img /home/tuesipipele/Unicron-Kernel//build_folder/output/Unicron-Kernel_j7xelte.img
+mv /home/tuesipipele/Unicron-Kernel/arch/arm64/boot/Image /home/tuesipipele/Unicron-Kernel/build_folder/split_img/boot.img-zImage
+mv /home/tuesipipele/Unicron-Kernel/arch/arm64/boot/dtb.img /home/tuesipipele/Unicron-Kernel/build_folder/split_img/boot.img-dt
+echo martins | sudo -S /home/tuesipipele/Unicron-Kernel/build_folder/repackimg.sh
+mv /home/tuesipipele/Unicron-Kernel/build_folder/image-new.img /home/tuesipipele/Unicron-Kernel/build_folder/output/Unicron-Kernel_j7xelte.img
 echo "Cleaning Please wait....."
 make clean
 echo "Done"
@@ -114,10 +111,10 @@ elif [ $n -eq 9 ]; then
 make exynos7870-j7y17lte_defconfig
 make -j"$CPU"
 echo "Kernel Compiled for J7y17lte"
-mv /home/tuesipipele/Unicron-Kernel//arch/arm64/boot/Image /home/tuesipipele/Unicron-Kernel//build_folder/split_img/boot.img-zImage
-mv /home/tuesipipele/Unicron-Kernel//arch/arm64/boot/dtb.img /home/tuesipipele/Unicron-Kernel//build_folder/split_img/boot.img-dt
-echo martins | sudo -S /home/tuesipipele/Unicron-Kernel//build_folder/repackimg.sh
-mv /home/tuesipipele/Unicron-Kernel//build_folder/image-new.img /home/tuesipipele/Unicron-Kernel//build_folder/output/Unicron-Kernel_j7y17lte.img
+mv /home/tuesipipele/Unicron-Kernel/arch/arm64/boot/Image /home/tuesipipele/Unicron-Kernel/build_folder/split_img/boot.img-zImage
+mv /home/tuesipipele/Unicron-Kernel/arch/arm64/boot/dtb.img /home/tuesipipele/Unicron-Kernel/build_folder/split_img/boot.img-dt
+echo martins | sudo -S /home/tuesipipele/Unicron-Kernel/build_folder/repackimg.sh
+mv /home/tuesipipele/Unicron-Kernel/build_folder/image-new.img /home/tuesipipele/Unicron-Kernel/build_folder/output/Unicron-Kernel_j7y17lte.img
 echo "Cleaning Please wait....."
 make clean
 echo "Done"
@@ -128,10 +125,10 @@ elif [ $n -eq 10 ]; then
 make exynos7870-on7xelte_defconfig
 make -j"$CPU"
 echo "Kernel Compiled for on7xelte"
-mv /home/tuesipipele/Unicron-Kernel//arch/arm64/boot/Image /home/tuesipipele/Unicron-Kernel//build_folder/split_img/boot.img-zImage
-mv /home/tuesipipele/Unicron-Kernel//arch/arm64/boot/dtb.img /home/tuesipipele/Unicron-Kernel//build_folder/split_img/boot.img-dt
-echo martins | sudo -S /home/tuesipipele/Unicron-Kernel//build_folder/repackimg.sh
-mv /home/tuesipipele/Unicron-Kernel//build_folder/image-new.img /home/tuesipipele/Unicron-Kernel//build_folder/output/Unicron-Kernel_on7xelte.img
+mv /home/tuesipipele/Unicron-Kernel/arch/arm64/boot/Image /home/tuesipipele/Unicron-Kernel/build_folder/split_img/boot.img-zImage
+mv /home/tuesipipele/Unicron-Kernel/arch/arm64/boot/dtb.img /home/tuesipipele/Unicron-Kernel/build_folder/split_img/boot.img-dt
+echo martins | sudo -S /home/tuesipipele/Unicron-Kernel/build_folder/repackimg.sh
+mv /home/tuesipipele/Unicron-Kernel/build_folder/image-new.img /home/tuesipipele/Unicron-Kernel/build_folder/output/Unicron-Kernel_on7xelte.img
 echo "Cleaning Please wait....."
 make clean
 echo "Done"
@@ -144,10 +141,10 @@ echo "============="
 make exynos7870-a3y17lte_defconfig
 make -j"$CPU"
 echo "Kernel Compiled for A3lte"
-mv /home/tuesipipele/Unicron-Kernel//arch/arm64/boot/Image /home/tuesipipele/Unicron-Kernel//build_folder/split_img/boot.img-zImage
-mv /home/tuesipipele/Unicron-Kernel//arch/arm64/boot/dtb.img /home/tuesipipele/Unicron-Kernel//build_folder/split_img/boot.img-dt
-echo martins | sudo -S /home/tuesipipele/Unicron-Kernel//build_folder/repackimg.sh
-mv /home/tuesipipele/Unicron-Kernel//build_folder/image-new.img /home/tuesipipele/Unicron-Kernel//build_folder/output/Unicron-Kernel_a3y17lte.img
+mv /home/tuesipipele/Unicron-Kernel/arch/arm64/boot/Image /home/tuesipipele/Unicron-Kernel/build_folder/split_img/boot.img-zImage
+mv /home/tuesipipele/Unicron-Kernel/arch/arm64/boot/dtb.img /home/tuesipipele/Unicron-Kernel/build_folder/split_img/boot.img-dt
+echo martins | sudo -S /home/tuesipipele/Unicron-Kernel/build_folder/repackimg.sh
+mv /home/tuesipipele/Unicron-Kernel/build_folder/image-new.img /home/tuesipipele/Unicron-Kernel/build_folder/output/Unicron-Kernel_a3y17lte.img
 echo "Cleaning Please wait....."
 make clean
 echo "Done"
@@ -156,10 +153,10 @@ echo "Flashable image is at output folder"
 make exynos7870-j7velte_defconfig
 make -j"$CPU"
 echo "Kernel Compiled for J7velte"
-mv /home/tuesipipele/Unicron-Kernel//arch/arm64/boot/Image /home/tuesipipele/Unicron-Kernel//build_folder/split_img/boot.img-zImage
-mv /home/tuesipipele/Unicron-Kernel//arch/arm64/boot/dtb.img /home/tuesipipele/Unicron-Kernel//build_folder/split_img/boot.img-dt
-echo martins | sudo -S /home/tuesipipele/Unicron-Kernel//build_folder/repackimg.sh
-mv /home/tuesipipele/Unicron-Kernel//build_folder/image-new.img /home/tuesipipele/Unicron-Kernel//build_folder/output/Unicron-Kernel_j7velte.img
+mv /home/tuesipipele/Unicron-Kernel/arch/arm64/boot/Image /home/tuesipipele/Unicron-Kernel/build_folder/split_img/boot.img-zImage
+mv /home/tuesipipele/Unicron-Kernel/arch/arm64/boot/dtb.img /home/tuesipipele/Unicron-Kernel/build_folder/split_img/boot.img-dt
+echo martins | sudo -S /home/tuesipipele/Unicron-Kernel/build_folder/repackimg.sh
+mv /home/tuesipipele/Unicron-Kernel/build_folder/image-new.img /home/tuesipipele/Unicron-Kernel/build_folder/output/Unicron-Kernel_j7velte.img
 echo "Cleaning Please wait....."
 make clean
 echo "Done"
@@ -168,10 +165,10 @@ echo "Flashable image is at output folder"
 make exynos7870-j5y17lte_defconfig
 make -j"$CPU"
 echo "Kernel Compiled for J5"
-mv /home/tuesipipele/Unicron-Kernel//arch/arm64/boot/Image /home/tuesipipele/Unicron-Kernel//build_folder/split_img/boot.img-zImage
-mv /home/tuesipipele/Unicron-Kernel//arch/arm64/boot/dtb.img /home/tuesipipele/Unicron-Kernel//build_folder/split_img/boot.img-dt
-echo martins | sudo -S /home/tuesipipele/Unicron-Kernel//build_folder/repackimg.sh
-mv /home/tuesipipele/Unicron-Kernel//build_folder/image-new.img /home/tuesipipele/Unicron-Kernel//build_folder/output/Unicron-Kernel_j5y17lte.img
+mv /home/tuesipipele/Unicron-Kernel/arch/arm64/boot/Image /home/tuesipipele/Unicron-Kernel/build_folder/split_img/boot.img-zImage
+mv /home/tuesipipele/Unicron-Kernel/arch/arm64/boot/dtb.img /home/tuesipipele/Unicron-Kernel/build_folder/split_img/boot.img-dt
+echo martins | sudo -S /home/tuesipipele/Unicron-Kernel/build_folder/repackimg.sh
+mv /home/tuesipipele/Unicron-Kernel/build_folder/image-new.img /home/tuesipipele/Unicron-Kernel/build_folder/output/Unicron-Kernel_j5y17lte.img
 echo "Cleaning Please wait....."
 make clean
 echo "Done"
@@ -180,10 +177,10 @@ echo "Flashable image is at output folder"
 make exynos7870-j6lte_defconfig
 make -j"$CPU"
 echo "Kernel Compiled for J6lte"
-mv /home/tuesipipele/Unicron-Kernel//arch/arm64/boot/Image /home/tuesipipele/Unicron-Kernel//build_folder/split_img/boot.img-zImage
-mv /home/tuesipipele/Unicron-Kernel//arch/arm64/boot/dtb.img /home/tuesipipele/Unicron-Kernel//build_folder/split_img/boot.img-dt
-echo martins | sudo -S /home/tuesipipele/Unicron-Kernel//build_folder/repackimg.sh
-mv /home/tuesipipele/Unicron-Kernel//build_folder/image-new.img /home/tuesipipele/Unicron-Kernel//build_folder/output/Unicron-Kernel_j6lte.img
+mv /home/tuesipipele/Unicron-Kernel/arch/arm64/boot/Image /home/tuesipipele/Unicron-Kernel/build_folder/split_img/boot.img-zImage
+mv /home/tuesipipele/Unicron-Kernel/arch/arm64/boot/dtb.img /home/tuesipipele/Unicron-Kernel/build_folder/split_img/boot.img-dt
+echo martins | sudo -S /home/tuesipipele/Unicron-Kernel/build_folder/repackimg.sh
+mv /home/tuesipipele/Unicron-Kernel/build_folder/image-new.img /home/tuesipipele/Unicron-Kernel/build_folder/output/Unicron-Kernel_j6lte.img
 echo "Cleaning Please wait....."
 make clean
 echo "Done"
@@ -192,10 +189,10 @@ echo "Flashable image is at output folder"
 make exynos7870-j7xelte_defconfig
 make -j"$CPU"
 echo "Kernel Compiled for J7xelte"
-mv /home/tuesipipele/Unicron-Kernel//arch/arm64/boot/Image /home/tuesipipele/Unicron-Kernel//build_folder/split_img/boot.img-zImage
-mv /home/tuesipipele/Unicron-Kernel//arch/arm64/boot/dtb.img /home/tuesipipele/Unicron-Kernel//build_folder/split_img/boot.img-dt
-echo martins | sudo -S /home/tuesipipele/Unicron-Kernel//build_folder/repackimg.sh
-mv /home/tuesipipele/Unicron-Kernel//build_folder/image-new.img /home/tuesipipele/Unicron-Kernel//build_folder/output/Unicron-Kernel_j7xelte.img
+mv /home/tuesipipele/Unicron-Kernel/arch/arm64/boot/Image /home/tuesipipele/Unicron-Kernel/build_folder/split_img/boot.img-zImage
+mv /home/tuesipipele/Unicron-Kernel/arch/arm64/boot/dtb.img /home/tuesipipele/Unicron-Kernel/build_folder/split_img/boot.img-dt
+echo martins | sudo -S /home/tuesipipele/Unicron-Kernel/build_folder/repackimg.sh
+mv /home/tuesipipele/Unicron-Kernel/build_folder/image-new.img /home/tuesipipele/Unicron-Kernel/build_folder/output/Unicron-Kernel_j7xelte.img
 echo "Cleaning Please wait....."
 make clean
 echo "Done"
@@ -204,10 +201,10 @@ echo "Flashable image is at output folder"
 make exynos7870-j7y17lte_defconfig
 make -j"$CPU"
 echo "Kernel Compiled for J7y17lte"
-mv /home/tuesipipele/Unicron-Kernel//arch/arm64/boot/Image /home/tuesipipele/Unicron-Kernel//build_folder/split_img/boot.img-zImage
-mv /home/tuesipipele/Unicron-Kernel//arch/arm64/boot/dtb.img /home/tuesipipele/Unicron-Kernel//build_folder/split_img/boot.img-dt
-echo martins | sudo -S /home/tuesipipele/Unicron-Kernel//build_folder/repackimg.sh
-mv /home/tuesipipele/Unicron-Kernel//build_folder/image-new.img /home/tuesipipele/Unicron-Kernel//build_folder/output/Unicron-Kernel_j7y17lte.img
+mv /home/tuesipipele/Unicron-Kernel/arch/arm64/boot/Image /home/tuesipipele/Unicron-Kernel/build_folder/split_img/boot.img-zImage
+mv /home/tuesipipele/Unicron-Kernel/arch/arm64/boot/dtb.img /home/tuesipipele/Unicron-Kernel/build_folder/split_img/boot.img-dt
+echo martins | sudo -S /home/tuesipipele/Unicron-Kernel/build_folder/repackimg.sh
+mv /home/tuesipipele/Unicron-Kernel/build_folder/image-new.img /home/tuesipipele/Unicron-Kernel/build_folder/output/Unicron-Kernel_j7y17lte.img
 echo "Cleaning Please wait....."
 make clean
 echo "Done"
@@ -216,10 +213,10 @@ echo "Flashable image is at output folder"
 make exynos7870-on7xelte_defconfig
 make -j"$CPU"
 echo "Kernel Compiled for on7xelte"
-mv /home/tuesipipele/Unicron-Kernel//arch/arm64/boot/Image /home/tuesipipele/Unicron-Kernel//build_folder/split_img/boot.img-zImage
-mv /home/tuesipipele/Unicron-Kernel//arch/arm64/boot/dtb.img /home/tuesipipele/Unicron-Kernel//build_folder/split_img/boot.img-dt
-echo martins | sudo -S /home/tuesipipele/Unicron-Kernel//build_folder/repackimg.sh
-mv /home/tuesipipele/Unicron-Kernel//build_folder/image-new.img /home/tuesipipele/Unicron-Kernel/build_folder/output/Unicron-Kernel_on7xelte.img
+mv /home/tuesipipele/Unicron-Kernel/arch/arm64/boot/Image /home/tuesipipele/Unicron-Kernel/build_folder/split_img/boot.img-zImage
+mv /home/tuesipipele/Unicron-Kernel/arch/arm64/boot/dtb.img /home/tuesipipele/Unicron-Kernel/build_folder/split_img/boot.img-dt
+echo martins | sudo -S /home/tuesipipele/Unicron-Kernel/build_folder/repackimg.sh
+mv /home/tuesipipele/Unicron-Kernel/build_folder/image-new.img /home/tuesipipele/Unicron-Kernel/build_folder/output/Unicron-Kernel_on7xelte.img
 echo "Cleaning Please wait....."
 make clean
 echo "Done"
