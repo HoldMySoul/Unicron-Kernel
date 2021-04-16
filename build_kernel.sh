@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "Script made by Martin Valentine && DAvinash97"
 echo "If something is wrong edit paths"
-export CROSS_COMPILE=/home/tuesipipele/Unicron-Kernel/prebuilts_gcc_linux-x86_aarch64_aarch64-linaro-7/bin/aarch64-linux-gnu-
+export CROSS_COMPILE=/home/tuesipipele/prebuilts_gcc_linux-x86_aarch64_aarch64-linaro-7/bin/aarch64-linux-gnu-
 export ARCH=arm64
 export ANDROID_MAJOR_VERSION=q
 export PLATFORM_VERSION=10
