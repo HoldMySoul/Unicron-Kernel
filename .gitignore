@@ -9,31 +9,6 @@
 #
 # Normal rules
 #
-.*
-*.o
-*.o.*
-*.a
-*.bin
-*.s
-*.ko
-*.so
-*.so.dbg
-*.mod.c
-*.i
-*.lst
-*.symtypes
-*.order
-*.elf
-*.gz
-*.bz2
-*.lzma
-*.xz
-*.lz4
-*.lzo
-*.patch
-*.gcno
-Module.symvers
-*.dwo
 
 #
 # Top-level generic files
