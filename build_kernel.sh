@@ -37,7 +37,7 @@ echo "============="
 echo "Building zImage For A320X"
 echo "============="
 make exynos7870-a3y17lte_defconfig
-make -j"$CPU"
+make -j32
 echo "Kernel Compiled for A3lte"
 mv /home/tuesipipele/Unicron-Kernel/arch/arm64/boot/Image /home/tuesipipele/Unicron-Kernel/build_folder/split_img/boot.img-zImage
 mv /home/tuesipipele/Unicron-Kernel/arch/arm64/boot/dtb.img /home/tuesipipele/Unicron-Kernel/build_folder/split_img/boot.img-dt
