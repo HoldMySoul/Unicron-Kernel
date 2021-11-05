@@ -8,32 +8,6 @@ export PLATFORM_VERSION=10
 export USE_CCACHE=1
 CPU=`nproc --all`
 clear
-echo "Did you establish Build Environment?"
-
-echo "Select"
-echo "1 = Yes"
-echo "2 = No, idk what that is"
-clear
-
-if [ $n -eq 1 ]; then
-echo "Continuing to build"
-
-elif [ $n -eq 2 ]; then
-sudo apt-get install git-core gnupg flex bison build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc unzip fontconfig
-
-fi
-
-echo "Do you have toolcahin?"
-
-echo "1 = Yes"
-echo "2 = No, i need one."
-
-if [ $n -eq 1 ]; then
-echo "Nice job"
-
-elif [ $n -eq 2 ]; then
-git clone https://github.com/HoldMySoul/prebuilts_gcc_linux-x86_aarch64_aarch64-linaro-7.git prebuilts_gcc_linux-x86_aarch64_aarch64-linaro-7
-fi
 
 echo "Select"
 echo "1 = Exit"
@@ -64,7 +38,7 @@ echo "Building zImage For A320X"
 echo "============="
 make exynos7870-a3y17lte_defconfig
 make -j"$CPU"
-echo "Kernel Compiled for A3lte"
+echo "Kernel Compiled for a3y17lte"
 mv /home/server/Unicron-Kernel//arch/arm64/boot/Image /home/server/Unicron-Kernel//build_folder/split_img/boot.img-zImage
 mv /home/server/Unicron-Kernel//arch/arm64/boot/dtb.img /home/server/Unicron-Kernel//build_folder/split_img/boot.img-dt
 echo martins | sudo -S /home/server/Unicron-Kernel//build_folder/repackimg.sh
